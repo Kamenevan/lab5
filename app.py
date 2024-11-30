@@ -3,7 +3,7 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = '113'  # Секретный ключ для сессий
+app.secret_key = '113'  #для хранения сессий необходимых для авторизации пользователей
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'  # Указание страницы для перенаправления при попытке доступа к защищенным страницам
